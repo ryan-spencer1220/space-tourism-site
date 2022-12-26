@@ -98,7 +98,7 @@ body {
 
 /* make images easier to work with */
 img,
-picture {
+picutre {
   max-width: 100%;
   display: block;
 }
@@ -510,7 +510,7 @@ body {
 
 /* crew */
 .crew {
-  background-image: url(./assets/crew/background-crew-mobile.jpg);
+  background-image: url(./assets/home/background-crew-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
@@ -606,25 +606,13 @@ body {
   grid-area: content;
 }
 
-.crew-meta {
-  flex-direction: column;
-  border-top: 1px solid hsl(var(--clr-white) / 0.1);
-  padding-top: 2.5rem;
-  margin-top: 2.5rem;
-}
-
-.crew-meta p {
-  font-size: 1.75rem;
-}
-
 .crew-details h2 {
   color: hsl(var(--clr-white) / 0.5);
 }
 
 @media (min-width: 35em) {
   .numbered-title {
-    text-align: left;
-    justify-self: left;
+    justify-self: start;
     margin-top: 2rem;
   }
 
@@ -635,7 +623,6 @@ body {
 
   .grid-container--crew {
     padding-bottom: 0;
-    --flow-space: 2rem;
     grid-template-areas:
       "title"
       "content"
@@ -654,17 +641,17 @@ body {
       );
   }
 
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+
   .grid-container--home > *:first-child {
     grid-column: 2;
   }
 
   .grid-container--home > *:last-child {
     grid-column: 3;
-  }
-
-  .grid-container--home {
-    padding-bottom: max(6rem, 20vh);
-    align-items: end;
   }
 
   .grid-container--destination {
@@ -687,7 +674,6 @@ body {
   }
 
   .grid-container--crew {
-    --flow-space: 2rem;
     grid-template-areas:
       ". title title ."
       ". content image ."
@@ -699,6 +685,10 @@ body {
   }
 
   /* .grid-container--crew > picture {
-    align-self: end;
+      align-self: end;
   } */
+}
+
+[role="tab"]:focus {
+  color: limegreen;
 }
